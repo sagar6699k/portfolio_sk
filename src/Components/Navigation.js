@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import avatar from "../img/avatar.png";
+import { Link } from 'react-scroll';
 import avatar1 from "../img/sagar_circle_pic.png";
 
 function Navigation({ setNavToggle }) {
@@ -29,9 +30,11 @@ function Navigation({ setNavToggle }) {
           }}
           className="nav-item"
         >
-          <NavLink to="/" activeClassName="active-class" exact>
+       
+          {/* <NavLink to="/" activeClassName="active-class" exact> */}
+          <Link to="home" spy={true} smooth={true} duration={500} >
             Home
-            <div className={`arrowAnim ${nav1?"sh":""}`} >
+            <div className={`arrowAnim ${nav1 ? "sh" : ""}`} >
               <div className="arrowSliding">
                 <div className="arrow"></div>
               </div>
@@ -45,7 +48,9 @@ function Navigation({ setNavToggle }) {
                 <div className="arrow"></div>
               </div>
             </div>
-          </NavLink>
+          </Link>
+          {/* </NavLink> */}
+
         </li>
         <li
           onClick={() => {
@@ -59,9 +64,11 @@ function Navigation({ setNavToggle }) {
           }}
           className="nav-item"
         >
-          <NavLink to="/about" activeClassName="active-class" exact>
+       
+          {/* <NavLink to="/about" activeClassName="active-class" exact> */}
+          <Link to="about" spy={true} smooth={true} duration={500}>
             About
-            <div className={`arrowAnim ${nav2?"sh":""}`}>
+            <div className={`arrowAnim ${nav2 ? "sh" : ""}`}>
               <div className="arrowSliding">
                 <div className="arrow"></div>
               </div>
@@ -75,7 +82,8 @@ function Navigation({ setNavToggle }) {
                 <div className="arrow"></div>
               </div>
             </div>
-          </NavLink>
+          </Link>
+          {/* </NavLink> */}
         </li>
         <li
           onClick={() => {
@@ -89,9 +97,11 @@ function Navigation({ setNavToggle }) {
           }}
           className="nav-item"
         >
-          <NavLink to="/resume" activeClassName="active-class" exact>
+
+          {/* <NavLink to="/resume" activeClassName="active-class" exact> */}
+          <Link to="resume" spy={true} smooth={true} duration={500}>
             Skills
-            <div className={`arrowAnim ${nav3?"sh":""}`}>
+            <div className={`arrowAnim ${nav3 ? "sh" : ""}`}>
               <div className="arrowSliding">
                 <div className="arrow"></div>
               </div>
@@ -105,7 +115,8 @@ function Navigation({ setNavToggle }) {
                 <div className="arrow"></div>
               </div>
             </div>
-          </NavLink>
+          </Link>
+          {/* </NavLink> */}
         </li>
         <li
           onClick={() => {
@@ -119,9 +130,10 @@ function Navigation({ setNavToggle }) {
           }}
           className="nav-item"
         >
-          <NavLink to="/portfolios" activeClassName="active-class" exact>
+          {/* <NavLink to="/portfolios" activeClassName="active-class" exact> */}
+          <Link to="portfolios" spy={true} smooth={true} duration={500} >
             Projects
-            <div className={`arrowAnim ${nav4?"sh":""}`}>
+            <div className={`arrowAnim ${nav4 ? "sh" : ""}`}>
               <div className="arrowSliding">
                 <div className="arrow"></div>
               </div>
@@ -135,7 +147,8 @@ function Navigation({ setNavToggle }) {
                 <div className="arrow"></div>
               </div>
             </div>
-          </NavLink>
+          </Link>
+          {/* </NavLink> */}
         </li>
         <li
           onClick={() => {
@@ -149,9 +162,10 @@ function Navigation({ setNavToggle }) {
           }}
           className="nav-item"
         >
-          <NavLink to="/blogs" activeClassName="active-class" exact>
+          {/* <NavLink to="/blogs" activeClassName="active-class" exact> */}
+          <Link to="blogs" spy={true} smooth={true} duration={500}>
             Blogs
-            <div className={`arrowAnim ${nav5?"sh":""}`}>
+            <div className={`arrowAnim ${nav5 ? "sh" : ""}`}>
               <div className="arrowSliding">
                 <div className="arrow"></div>
               </div>
@@ -165,7 +179,8 @@ function Navigation({ setNavToggle }) {
                 <div className="arrow"></div>
               </div>
             </div>
-          </NavLink>
+          </Link>
+          {/* </NavLink> */}
         </li>
         <li
           onClick={() => {
@@ -179,7 +194,8 @@ function Navigation({ setNavToggle }) {
           }}
           className="nav-item"
         >
-          <NavLink to="/contact" activeClassName="active-class" exact>
+          {/* <NavLink to="/contact" activeClassName="active-class" exact> */}
+          <Link to="contact" spy={true} smooth={true} duration={500}>
             Contact
             <div className={`arrowAnim ${nav6?"sh":""}`}>
               <div className="arrowSliding">
@@ -195,7 +211,8 @@ function Navigation({ setNavToggle }) {
                 <div className="arrow"></div>
               </div>
             </div>
-          </NavLink>
+          </Link>
+          {/* </NavLink> */}
         </li>
       </ul>
       <footer className="footer">

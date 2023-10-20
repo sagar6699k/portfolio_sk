@@ -1,5 +1,5 @@
 
-import {  useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import Sidebar from "./Components/Sidebar";
 import styled from 'styled-components';
@@ -14,7 +14,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Route, Switch as Switching, useLocation } from "react-router-dom";
 import Switch from '@material-ui/core/Switch'
 import { IconButton } from "@material-ui/core";
-import {AnimatePresence} from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 import "./App.css"
 function App() {
   const [theme, setTheme] = useState('dark-theme');
@@ -22,62 +22,62 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [navToggle, setNavToggle] = useState(false);
   const location = useLocation()
-  useEffect(()=>{
+  useEffect(() => {
     document.documentElement.className = theme;
   }, [theme]);
 
-  const themeToggler = () =>{
+  const themeToggler = () => {
     let temp = theme.split(" ")
-    if(temp.length<2){
-      if(temp[0] === 'light-theme'){
+    if (temp.length < 2) {
+      if (temp[0] === 'light-theme') {
         setTheme('dark-theme');
         setChecked(false)
       }
-      else{
+      else {
         setTheme('light-theme');
         setChecked(true)
       }
     }
-    else{
-      if(temp[0] === 'light-theme'){
-        setTheme("dark-theme" + " " +temp[1]);
+    else {
+      if (temp[0] === 'light-theme') {
+        setTheme("dark-theme" + " " + temp[1]);
         setChecked(false)
       }
-      else{
+      else {
         setTheme("light-theme" + " " + temp[1]);
         setChecked(true)
       }
     }
   }
-  window.addEventListener("load",()=>{
+  window.addEventListener("load", () => {
     setTimeout(() => {
-     setTimeout(() => {
-      setLoading(false)
-     }, 1500);
+      setTimeout(() => {
+        setLoading(false)
+      }, 1500);
     }, 1000);
   })
   return (
     <>
-   {loading && <><div className="hold">
-<p aria-label="Loading">Welcome To My Portfolio...</p>
-</div>
-   </>
-   }
-   {loading?null:<> <div className="colors">
-     
-      <span onClick={()=>{
-        setTheme(`${theme.split(" ")[0]} orange-theme`)
-      }}></span>
-   
-      <span onClick={()=>{
-        setTheme(`${theme.split(" ")[0]}`)
-      }}></span>
-    </div>
-    <div className="App">
-        <Sidebar navToggle={navToggle} setNavToggle={setNavToggle}/>
+      {loading && <><div className="hold">
+        <p aria-label="Loading">Welcome To My Portfolio...</p>
+      </div>
+      </>
+      }
+      {loading ? null : <> <div className="colors">
 
-        <div className="theme" id="h">
-          <div className="light-dark-mode">
+        <span onClick={() => {
+          setTheme(`${theme.split(" ")[0]} orange-theme`)
+        }}></span>
+
+        <span onClick={() => {
+          setTheme(`${theme.split(" ")[0]}`)
+        }}></span>
+      </div>
+        <div className="App">
+          <Sidebar navToggle={navToggle} setNavToggle={setNavToggle} />
+
+          <div className="theme" id="h">
+            <div className="light-dark-mode">
               <div className="left-content">
                 <Brightness4Icon />
               </div>
@@ -88,19 +88,19 @@ function App() {
                   inputProps={{ 'aria-label': '' }}
                   size="medium"
                   onClick={themeToggler}
-                  
+
                 />
               </div>
             </div>
-        </div>
+          </div>
 
-        <div className="ham-burger-menu">
-          <IconButton onClick={() => setNavToggle(!navToggle)}>
+          <div className="ham-burger-menu">
+            <IconButton onClick={() => setNavToggle(!navToggle)}>
               <MenuIcon />
-          </IconButton>
-        </div>
+            </IconButton>
+          </div>
 
-        <MainContentStyled>
+          {/* <MainContentStyled>
           
           <AnimatePresence>
           <Switching location={location} key={location.key}>
@@ -125,8 +125,30 @@ function App() {
           </Switching>
          </AnimatePresence>
 
-        </MainContentStyled>
-    </div></>}
+        </MainContentStyled> */}
+
+
+          <MainContentStyled>
+            <div id="home">
+              <HomePage theme={theme} />
+            </div>
+            <div id="about">
+              <AboutPage />
+            </div>
+            <div id="resume">
+              <ResumePage />
+            </div>
+            <div id="portfolios">
+              <PortfoliosPage />
+            </div>
+            <div id="blogs">
+              <BlogsPage />
+            </div>
+            <div id="contact">
+              <ContactPage />
+            </div>
+          </MainContentStyled>
+        </div></>}
     </>
   );
 }
