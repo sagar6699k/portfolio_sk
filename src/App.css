@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
+.download_btn{
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+}
 .containerr {
   position: fixed;
   top: 0;

@@ -2,10 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 import Navigation from './Navigation';
 
-function Sidebar({navToggle, setNavToggle}) {
+function Sidebar({ navToggle, setNavToggle }) {
+
+    console.log("navToggle -" ,navToggle);
     return (
         <SidebarStyled className={`${navToggle ? 'nav-toggle' : ''}`}>
-            <Navigation setNavToggle={setNavToggle}/>
+            <Navigation navToggle={navToggle} setNavToggle={setNavToggle}/>
         </SidebarStyled>
     )
 }

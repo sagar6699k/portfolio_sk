@@ -1,12 +1,35 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function PrimaryButton({title,resume}) {
+function PrimaryButton({ title, resume }) {
+    const handleDownloadAndPreview = () => {
+        // Open the resume in a new tab
+        const newTab = window.open(resume, '_blank');
+
+        // Download the resume by creating an invisible anchor element
+        const downloadLink = document.createElement('a');
+        downloadLink.href = resume;
+        downloadLink.download = 'SagarKurewar_fw11_034.pdf'; // Set the desired download filename
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+    };
+
+
+
+    // return (
+    //     <PrimaryButtonStyled href={resume} download>
+    //         {title}
+    //     </PrimaryButtonStyled>
+    // )
+
     return (
-        <PrimaryButtonStyled href={resume} download>
-            {title}
+        <PrimaryButtonStyled>
+            <button className='download_btn' onClick={handleDownloadAndPreview}>{title}</button>
         </PrimaryButtonStyled>
-    )
+    );
 }
 
 const PrimaryButtonStyled = styled.a`
