@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -172,8 +172,9 @@ h6{
       right: 3%;
     text-align: right;
       /* top: 3%;  */
+      top: 0; 
       display: none;
-      z-index: 15;
+      z-index: 100;
       svg{
           font-size: 3rem;
       }
