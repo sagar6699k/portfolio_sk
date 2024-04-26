@@ -103,41 +103,7 @@ function Navigation({ setNavToggle }) {
           </Link>
           {/* </NavLink> */}
         </li>
-        <li
-          className="nav-item"
-        >
 
-          {/* <NavLink to="/about" activeClassName="active-class" exact> */}
-          <Link to="about" spy={true} smooth={true} duration={500}
-            onClick={() => {
-              setNavToggle(false);
-              setNav1(false);
-              setNav2(false);
-              setNav3(false);
-              setNav4(false);
-              setNav5(true);
-              setNav6(false);
-              handleDownloadAndPreview("/SagarKurewar_fw11_034.pdf")
-            }}
-          >
-            Resume
-            <div className={`arrowAnim ${nav5 ? "sh" : ""}`}>
-              <div className="arrowSliding">
-                <div className="arrow"></div>
-              </div>
-              <div className="arrowSliding delay1">
-                <div className="arrow"></div>
-              </div>
-              <div className="arrowSliding delay2">
-                <div className="arrow"></div>
-              </div>
-              <div className="arrowSliding delay3">
-                <div className="arrow"></div>
-              </div>
-            </div>
-          </Link>
-          {/* </NavLink> */}
-        </li>
         <li
           className="nav-item"
         >
@@ -255,6 +221,42 @@ function Navigation({ setNavToggle }) {
           >
             Contact
             <div className={`arrowAnim ${nav6 ? "sh" : ""}`}>
+              <div className="arrowSliding">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay1">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay2">
+                <div className="arrow"></div>
+              </div>
+              <div className="arrowSliding delay3">
+                <div className="arrow"></div>
+              </div>
+            </div>
+          </Link>
+          {/* </NavLink> */}
+        </li>
+
+        <li
+          className="nav-item"
+        >
+
+          {/* <NavLink to="/about" activeClassName="active-class" exact> */}
+          <Link to="about" spy={true} smooth={true} duration={500}
+            onClick={() => {
+              setNavToggle(false);
+              setNav1(false);
+              setNav2(false);
+              setNav3(false);
+              setNav4(false);
+              setNav5(true);
+              setNav6(false);
+              handleDownloadAndPreview("/SagarKurewar_fw11_034.pdf")
+            }}
+          >
+            Resume
+            <div className={`arrowAnim ${nav5 ? "sh" : ""}`}>
               <div className="arrowSliding">
                 <div className="arrow"></div>
               </div>

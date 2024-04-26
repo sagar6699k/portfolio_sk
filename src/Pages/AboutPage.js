@@ -32,13 +32,13 @@ function AboutPage() {
             <AboutStyled >
                 <Title title={'About Me'} span={'About Me'} />
                 <ImageSection />
-                <ServicesSection />
+                {/* <ServicesSection /> */}
+                <div style={{marginBottom:"5rem"}}></div>
             
             </AboutStyled >
                <Resume />
         </MainLayout>
         </motion.div>
-      
       </>
     )
 }

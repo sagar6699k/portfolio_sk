@@ -2,10 +2,21 @@
 import p1 from '../img/scavenger.png';
 import p2 from '../img/Movix.png';
 import p3 from '../img/kickstart.png';
+import p4 from '../img/NotesApp.png';
 
 const portfolios = [
     {
         id: 1,
+        category: 'Web Application',
+        image: p4,
+        link1: 'https://github.com/sagar6699k/notes-app-frontend',
+        link2: 'https://notes-app-frontend-sigma.vercel.app/',
+        title: 'NotesApp',
+        text: 'NotesApp is the web application, where user can save their notes, data, and daily task just like google keep app.',
+        text1: " : ReactJS | Redux-toolkit | Typescript | MaterialUI | NodeJS | Express | MongoDB"
+    },
+    {
+        id: 2,
         category: 'Web Application',
         image: p2,
         link1: 'https://github.com/sagar6699k/movix_app',
@@ -15,17 +26,17 @@ const portfolios = [
         text1: " : ReactJS | Redux-toolkit | react-player | sass"
     },
     {
-        id: 2,
+        id: 3,
         category: 'Web Application',
         image: p1,
         link1: 'https://github.com/sagar6699k/E-wasteManagement',
         link2: 'https://e-waste-management.netlify.app/',
-        title: 'scAvengers -The E-Waste Management App',
-        text: 'scAvengers is an E-waste Management App that allows users to sell e-waste scrap at any price they want.',
+        title: 'scAvengers App',
+        text: 'scAvengers: An innovative e-waste management app empowering users to set their own prices when selling e-waste scrap.',
         text1: " : ReactJS | NodeJS | Express | Mongodb | CSS"
     },
     {
-        id: 2,
+        id: 4,
         category: 'Web Application',
         image: "https://grocurv.com/media/images/Nykaa.height-480.png",
         link1: 'https://github.com/sagar6699k/Nykaa-clone',
@@ -35,7 +46,7 @@ const portfolios = [
         text1: " : eJs | CSS | Javascript | Express Js | MongoDB"
     },
     {
-        id: 3,
+        id: 5,
         category: 'Web Application',
         image: p3,
         link1: 'https://github.com/sagar6699k/Atom',

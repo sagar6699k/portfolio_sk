@@ -9,29 +9,25 @@ function ImageSection() {
   useEffect(() => {
     init(infoo.current, {
       showCursor: false,
-      backSpeed:  100,
+      backSpeed: 100,
       startDelay: 500,
-      backDelay:800,
-      strings: ["Sagar Kurewar","A Web Developer", "A Problem Solver"],
+      backDelay: 800,
+      strings: ["Sagar Kurewar", "A Web Developer", "A Problem Solver"],
     });
-  },[])
+  }, [])
   return (
     <ImageSectionStyled>
-     
+
       <div className="right-content">
         <h4>
           I am <span ref={infoo}></span>
         </h4>
         <p className="paragraph">
-          I am Web Devloper. Strong in design and integration with intuitive
-          problem-solving skills. Proficient in React, Javascript. Passionate
-          about implementing and launching new projects. Ability to translate
-          business requirements into technical solutions. Looking to start the
-          career as a web developer with a reputed firm driven by technology.
+          Experienced web developer adept at design, integration, and problem-solving, with proficiency in React and JavaScript. Enthusiastic about launching innovative projects and adept at translating business needs into technical solutions. Seeking opportunities with a technology-focused firm to embark on a career in web development.
         </p>
         <div className="about-info"></div>
-        <PrimaryButton  title={"Download Resume"} resume={"/SagarKurewar_fw11_034.pdf"}> </PrimaryButton>
-        
+        <PrimaryButton title={"Download Resume"} resume={"/SagarKurewar_fw11_034.pdf"}> </PrimaryButton>
+
       </div>
     </ImageSectionStyled>
   );
